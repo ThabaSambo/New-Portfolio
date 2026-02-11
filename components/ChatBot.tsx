@@ -2,11 +2,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { getGeminiResponse } from '../services/gemini';
 import { ChatMessage } from '../types';
+import { PERSONAL_INFO } from '../data';
 
 const ChatBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { role: 'model', text: "Hi! I'm Alex's AI twin. Ask me anything about their projects, skills, or experience!" }
+    { role: 'model', text: `Hi! I'm ${PERSONAL_INFO.name.split(' ')[0]}'s AI twin. Ask me anything about their projects, skills, or experience!` }
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -38,9 +39,11 @@ const ChatBot: React.FC = () => {
         <div className="glass-card w-[350px] sm:w-[400px] h-[500px] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-white/50 animate-in fade-in slide-in-from-bottom-4 duration-300">
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 text-white flex justify-between items-center">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg">A</div>
+              <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg">
+                {PERSONAL_INFO.name.charAt(0)}
+              </div>
               <div>
-                <div className="font-bold leading-tight">Alex AI</div>
+                <div className="font-bold leading-tight">{PERSONAL_INFO.name.split(' ')[0]} AI</div>
                 <div className="text-[10px] text-blue-100 flex items-center gap-1">
                   <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span> Online Now
                 </div>
@@ -82,7 +85,7 @@ const ChatBot: React.FC = () => {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-              placeholder="Ask about Alex's SQL skills..."
+              placeholder={`Ask about ${PERSONAL_INFO.name.split(' ')[0]}'s skills...`}
               className="flex-1 px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
             />
             <button 

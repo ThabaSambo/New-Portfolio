@@ -1,78 +1,79 @@
 
 import { Project, Skill, Experience } from './types';
 
+export const PERSONAL_INFO = {
+  name: "Thaba Josiah Sambo",
+  role: "Systems & Business Analyst",
+  experience: "4+ years",
+  location: "San Francisco, CA",
+  phone: "+1 (555) 012-3456",
+  email: "thaba.sambo@example.com",
+  linkedin: "linkedin.com/in/thaba-josiah-sambo"
+};
+
 export const PROJECTS: Project[] = [
   {
     id: '1',
-    title: 'FinTech Process Optimization',
-    category: 'Operations',
-    description: 'Conducted a deep-dive analysis of mortgage application workflows, identifying bottlenecks that caused a 15-day delay in processing.',
-    impact: 'Reduced application-to-approval time by 40% and improved customer satisfaction scores by 25%.',
-    tools: ['SQL', 'Tableau', 'Visio', 'Excel VBA'],
-    image: 'https://picsum.photos/seed/fintech/800/600',
+    title: 'ERP System Integration',
+    category: 'Systems Analysis',
+    description: 'Lead the gap analysis and architectural mapping for integrating a legacy supply chain system with a modern SAP ERP environment.',
+    impact: 'Reduced data latency by 40% and eliminated redundant manual entry workflows across 3 departments.',
+    tools: ['UML', 'REST APIs', 'SQL Server', 'SAP'],
+    image: 'https://img.freepik.com/free-vector/connected-world-concept-illustration_114360-3027.jpg',
     metrics: [
-      { name: 'Before (Days)', value: 45 },
-      { name: 'After (Days)', value: 27 }
+      { name: 'System Speed', value: 95 },
+      { name: 'Data Accuracy', value: 98 }
     ]
   },
   {
     id: '2',
-    title: 'Market Expansion Strategy',
-    category: 'Strategy',
-    description: 'Leveraged Python and Google Analytics data to forecast market trends for a retail giant entering the SE Asia market.',
-    impact: 'Estimated a $5M first-year revenue opportunity with 85% confidence interval accuracy.',
-    tools: ['Python', 'Pandas', 'PowerBI', 'Market Segmentation'],
-    image: 'https://picsum.photos/seed/market/800/600',
+    title: 'Digital Banking Transformation',
+    category: 'Business Analysis',
+    description: 'End-to-end requirement elicitation for a new mobile banking platform, bridging communication between business stakeholders and developers.',
+    impact: 'Successfully delivered 50+ user stories and SRS documentation that reduced development rework by 20%.',
+    tools: ['JIRA', 'Confluence', 'Figma', 'User Stories'],
+    image: 'https://img.freepik.com/free-vector/digital-banking-services-concept-illustration_114360-12836.jpg',
     metrics: [
-      { name: 'Market Reach %', value: 85 },
-      { name: 'Revenue Growth %', value: 12 }
+      { name: 'Stakeholder Satisfaction', value: 92 },
+      { name: 'On-time Delivery', value: 88 }
     ]
   },
   {
     id: '3',
-    title: 'Supply Chain Digitization',
-    category: 'Supply Chain',
-    description: 'Requirement gathering and stakeholder management for an end-to-end ERP migration affecting 500+ global users.',
-    impact: 'Achieved 98% user adoption rate within the first 3 months of rollout.',
-    tools: ['JIRA', 'Confluence', 'User Stories', 'ERP'],
-    image: 'https://picsum.photos/seed/supply/800/600',
+    title: 'Cloud Migration Strategy',
+    category: 'Systems Analysis',
+    description: 'Analysed existing on-premise infrastructure and designed the logical architecture for a transition to AWS microservices.',
+    impact: 'Decreased infrastructure overhead costs by $150k annually through optimized cloud resource planning.',
+    tools: ['AWS', 'Enterprise Architect', 'Lucidchart', 'BPMN'],
+    image: 'https://img.freepik.com/free-vector/cloud-computing-concept-illustration_114360-631.jpg',
     metrics: [
-      { name: 'Adoption Rate %', value: 98 },
-      { name: 'Efficiency Gain %', value: 30 }
+      { name: 'Cost Reduction', value: 30 },
+      { name: 'Scalability', value: 100 }
     ]
   }
 ];
 
 export const SKILLS: Skill[] = [
-  { name: 'SQL & Database Management', level: 90, category: 'Technical' },
-  { name: 'Tableau / PowerBI', level: 95, category: 'Technical' },
-  { name: 'Python (Data Analysis)', level: 80, category: 'Technical' },
-  { name: 'Requirements Engineering', level: 95, category: 'Domain' },
-  { name: 'Agile/Scrum Methodology', level: 85, category: 'Domain' },
-  { name: 'Stakeholder Management', level: 90, category: 'Soft' },
-  { name: 'Critical Thinking', level: 95, category: 'Soft' },
-  { name: 'Public Speaking', level: 80, category: 'Soft' }
+  { name: 'UML & BPMN 2.0', level: 95, category: 'Technical' },
+  { name: 'SQL & DB Schema Design', level: 90, category: 'Technical' },
+  { name: 'API Documentation (Swagger)', level: 85, category: 'Technical' },
+  { name: 'Req. Elicitation (SRS)', level: 95, category: 'Domain' },
+  { name: 'SDLC (Agile/Scrum)', level: 92, category: 'Domain' },
+  { name: 'System Architecture', level: 88, category: 'Domain' },
+  { name: 'Stakeholder Mgmt', level: 90, category: 'Soft' },
+  { name: 'Technical Writing', level: 95, category: 'Soft' }
 ];
 
 export const EXPERIENCES: Experience[] = [
   {
-    company: 'Global Analytics Corp',
-    role: 'Senior Business Analyst',
+    company: 'TechFlow Solutions',
+    role: 'Systems & Business Analyst',
     period: '2021 - Present',
     description: [
-      'Lead cross-functional teams to deliver enterprise-wide data solutions.',
-      'Managed a portfolio of projects valued at $2.5M annually.',
-      'Mentored 5 junior analysts in requirement elicitation and SQL optimization.'
-    ]
-  },
-  {
-    company: 'Startup Hub',
-    role: 'Business Operations Analyst',
-    period: '2019 - 2021',
-    description: [
-      'Developed real-time dashboards for C-suite performance tracking.',
-      'Automated reporting workflows saving 20 man-hours per week.',
-      'Conducted competitive market analysis for series B funding round.'
+      'Bridge the gap between business needs and technical solutions by translating high-level requirements into detailed system specifications.',
+      'Design comprehensive UML diagrams including sequence, class, and use-case diagrams to guide development teams.',
+      'Lead UAT (User Acceptance Testing) cycles and SIT (System Integration Testing) to ensure software quality.',
+      'Optimized 15+ business processes using BPMN standards, resulting in significant operational efficiency gains.'
     ]
   }
 ];
