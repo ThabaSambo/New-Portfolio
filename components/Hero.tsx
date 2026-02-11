@@ -3,15 +3,15 @@ import React from 'react';
 import { PERSONAL_INFO } from '../data';
 
 const Hero: React.FC = () => {
-  // High-quality professional graduation/corporate placeholder matching the requested image style
-  const profileImageUrl = "https://img.freepik.com/free-photo/paper-analysis_1098-15678.jpg?semt=ais_user_personalization&w=740&q=80"; 
+  // EDIT THIS LINE: Replace the URL below with your own image link or a Base64 string
+  const profileImageUrl = "https://media.licdn.com/dms/image/v2/D4D35AQFAVeZdKCZrbg/profile-framedphoto-shrink_400_400/B4DZvpPixIJoAc-/0/1769144724833?e=1771412400&v=beta&t=cycL8MO7RIs1dk9nhg4av-5Z93CS28Dd42dneUQQqCQ"; 
 
   return (
     <section className="bg-white dark:bg-slate-950 pt-12 pb-20 transition-colors">
       <div className="max-w-5xl mx-auto px-6">
         {/* Main Title */}
         <h1 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-100 mb-12 tracking-tight">
-          Thaba Josiah Sambo Systems & Business Analyst Portfolio
+          {PERSONAL_INFO.name} Systems & Business Analyst Portfolio
         </h1>
 
         {/* Profile Content */}
@@ -23,6 +23,10 @@ const Hero: React.FC = () => {
                  src={profileImageUrl} 
                  alt={`${PERSONAL_INFO.name} Professional Portrait`}
                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                 onError={(e) => {
+                   // Fallback if image fails to load
+                   (e.target as HTMLImageElement).src = "https://ui-avatars.com/api/?name=Thaba+Sambo&background=0D8ABC&color=fff&size=512";
+                 }}
                />
                <div className="absolute inset-0 bg-slate-900/10 dark:bg-transparent group-hover:bg-transparent transition-colors"></div>
             </div>
@@ -31,7 +35,7 @@ const Hero: React.FC = () => {
           {/* Right: Bio & Contact */}
           <div className="w-full md:w-2/3">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
-              Hi, I'm {PERSONAL_INFO.name}
+              Hi, I'm {PERSONAL_INFO.name.split(' ')[0]}
             </h2>
 
             <div className="space-y-5 text-slate-700 dark:text-slate-300 leading-relaxed text-[15px]">
