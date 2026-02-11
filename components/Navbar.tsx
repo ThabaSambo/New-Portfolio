@@ -7,6 +7,7 @@ interface NavbarProps {
   onNavigateProjects: () => void;
   onNavigateContact: () => void;
   onNavigateSkills: () => void;
+  onNavigateCompetencies: () => void;
   onNavigateExperience: () => void;
   theme: 'light' | 'dark';
   onToggleTheme: () => void;
@@ -17,6 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({
   onNavigateProjects, 
   onNavigateContact, 
   onNavigateSkills,
+  onNavigateCompetencies,
   onNavigateExperience,
   theme,
   onToggleTheme
@@ -34,24 +36,31 @@ const Navbar: React.FC<NavbarProps> = ({
 
           {/* Navigation Links */}
           <div className="hidden md:block">
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-4 lg:space-x-6">
               <button 
                 onClick={onNavigateProjects}
-                className="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white px-3 py-2 text-sm font-semibold transition-colors"
+                className="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white px-2 py-2 text-sm font-semibold transition-colors"
               >
                 Projects
               </button>
 
               <button 
                 onClick={onNavigateSkills}
-                className="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white px-3 py-2 text-sm font-semibold transition-colors"
+                className="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white px-2 py-2 text-sm font-semibold transition-colors"
               >
                 Skills
+              </button>
+
+              <button 
+                onClick={onNavigateCompetencies}
+                className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 px-2 py-2 text-sm font-bold transition-colors whitespace-nowrap"
+              >
+                Core Competencies
               </button>
               
               <button 
                 onClick={onNavigateExperience}
-                className="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white px-3 py-2 text-sm font-semibold transition-colors"
+                className="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white px-2 py-2 text-sm font-semibold transition-colors"
               >
                 Experience
               </button>
@@ -93,14 +102,14 @@ const Navbar: React.FC<NavbarProps> = ({
               )}
             </button>
             <button 
-              onClick={onNavigateSkills}
-              className="text-slate-500 dark:text-slate-400 p-2 text-xs font-bold border border-slate-200 dark:border-slate-800 rounded-lg"
+              onClick={onNavigateCompetencies}
+              className="text-blue-600 dark:text-blue-400 p-2 text-[10px] font-bold border border-blue-600 dark:border-blue-500 rounded-lg"
             >
-              Skills
+              Comp.
             </button>
             <button 
               onClick={onNavigateContact}
-              className="text-blue-600 dark:text-blue-400 p-2 text-xs font-bold border border-blue-600 dark:border-blue-500 rounded-lg"
+              className="text-blue-600 dark:text-blue-400 p-2 text-[10px] font-bold border border-blue-600 dark:border-blue-500 rounded-lg"
             >
               Contact
             </button>

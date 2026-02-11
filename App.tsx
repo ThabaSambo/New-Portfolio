@@ -12,9 +12,10 @@ import ProjectsPage from './components/ProjectsPage';
 import ContactPage from './components/ContactPage';
 import SkillsPage from './components/SkillsPage';
 import ExperiencePage from './components/ExperiencePage';
+import CompetenciesPage from './components/CompetenciesPage';
 
 const App: React.FC = () => {
-  const [view, setView] = useState<'home' | 'projects-page' | 'contact-page' | 'skills-page' | 'experience-page'>('home');
+  const [view, setView] = useState<'home' | 'projects-page' | 'contact-page' | 'skills-page' | 'experience-page' | 'competencies-page'>('home');
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('theme');
@@ -46,6 +47,9 @@ const App: React.FC = () => {
         window.scrollTo(0, 0);
       } else if (hash === '#detailed-skills') {
         setView('skills-page');
+        window.scrollTo(0, 0);
+      } else if (hash === '#core-competencies') {
+        setView('competencies-page');
         window.scrollTo(0, 0);
       } else if (hash === '#detailed-experience') {
         setView('experience-page');
@@ -82,6 +86,11 @@ const App: React.FC = () => {
     setView('skills-page');
   };
 
+  const navigateToCompetencies = () => {
+    window.location.hash = 'core-competencies';
+    setView('competencies-page');
+  };
+
   const navigateToExperience = () => {
     window.location.hash = 'detailed-experience';
     setView('experience-page');
@@ -98,6 +107,7 @@ const App: React.FC = () => {
         onNavigateProjects={navigateToProjects} 
         onNavigateContact={navigateToContact}
         onNavigateSkills={navigateToSkills}
+        onNavigateCompetencies={navigateToCompetencies}
         onNavigateExperience={navigateToExperience}
         theme={theme}
         onToggleTheme={toggleTheme}
@@ -121,6 +131,9 @@ const App: React.FC = () => {
         )}
         {view === 'skills-page' && (
           <SkillsPage onBack={navigateToHome} />
+        )}
+        {view === 'competencies-page' && (
+          <CompetenciesPage onBack={navigateToHome} />
         )}
         {view === 'experience-page' && (
           <ExperiencePage onBack={navigateToHome} />
