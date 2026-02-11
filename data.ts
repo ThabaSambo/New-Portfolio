@@ -1,5 +1,5 @@
 
-import { Project, Skill, Experience } from './types';
+import { Project, Skill, Experience, Education } from './types';
 
 export const PERSONAL_INFO = {
   name: "Thaba Josiah Sambo",
@@ -64,6 +64,25 @@ export const SKILLS: Skill[] = [
   { name: 'System Architecture', level: 88, category: 'Domain' },
   { name: 'Stakeholder Mgmt', level: 90, category: 'Soft' },
   { name: 'Technical Writing', level: 95, category: 'Soft' }
+];
+
+export const EDUCATION: Education[] = [
+  {
+    institution: "Vaal University Of Technology",
+    degree: "Advanced Diploma in Information Technology",
+  },
+  {
+    institution: "Vaal University Of Technology",
+    degree: "Diploma in Information Technology",
+  },
+  {
+    institution: "Inkomazi Secondary School",
+    degree: "Grade 12 National Senior Certificate",
+  }
+];
+
+export const CERTIFICATIONS = [
+  "Code C1 Drivers License"
 ];
 
 export const EXPERIENCES: Experience[] = [

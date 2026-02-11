@@ -23,6 +23,13 @@ export interface Experience {
   description: string[];
 }
 
+export interface Education {
+  institution: string;
+  degree: string;
+  period?: string;
+  details?: string;
+}
+
 export interface ChatMessage {
   role: 'user' | 'model';
   text: string;

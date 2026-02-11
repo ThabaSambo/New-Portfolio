@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import ProjectGallery from './components/ProjectGallery';
 import SkillsSection from './components/SkillsSection';
 import ExperienceTimeline from './components/ExperienceTimeline';
+import EducationSection from './components/EducationSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import ProjectsPage from './components/ProjectsPage';
@@ -108,6 +109,7 @@ const App: React.FC = () => {
             <ProjectGallery />
             <SkillsSection />
             <ExperienceTimeline />
+            <EducationSection />
             <ContactSection />
           </>
         )}
