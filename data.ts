@@ -4,60 +4,62 @@ import { Project, Skill, Experience } from './types';
 export const PERSONAL_INFO = {
   name: "Thaba Josiah Sambo",
   role: "Systems & Business Analyst",
-  experience: "4+ years",
-  location: "San Francisco, CA",
-  phone: "+1 (555) 012-3456",
-  email: "thaba.sambo@example.com",
-  linkedin: "linkedin.com/in/thaba-josiah-sambo"
+  experience: "3+ years",
+  location: "South Africa",
+  phone: "076 211 9498",
+  email: "thabasambo@gmail.com",
+  linkedin: "linkedin.com/in/thaba-sambo-2aaa85236",
+  github: "github.com/ThabaSambo"
 };
 
 export const PROJECTS: Project[] = [
   {
     id: '1',
-    title: 'ERP System Integration',
-    category: 'Systems Analysis',
-    description: 'Lead the gap analysis and architectural mapping for integrating a legacy supply chain system with a modern SAP ERP environment.',
-    impact: 'Reduced data latency by 40% and eliminated redundant manual entry workflows across 3 departments.',
-    tools: ['UML', 'REST APIs', 'SQL Server', 'SAP'],
-    image: 'https://img.freepik.com/free-vector/connected-world-concept-illustration_114360-3027.jpg',
-    metrics: [
-      { name: 'System Speed', value: 95 },
-      { name: 'Data Accuracy', value: 98 }
-    ]
+    title: 'Future Value Calculator',
+    category: 'Fintech Development',
+    description: 'A tool designed to estimate potential future values of investments based on provided variables, built with a focus on financial precision.',
+    impact: 'Empowered users to make data-driven investment decisions using a streamlined custom calculation engine.',
+    tools: ['Java', 'Springboot', 'Custom Framework', 'Financial Logic'],
+    image: 'https://img.freepik.com/free-vector/payment-information-concept-illustration_114360-2814.jpg',
+    metrics: []
   },
   {
     id: '2',
-    title: 'Digital Banking Transformation',
-    category: 'Business Analysis',
-    description: 'End-to-end requirement elicitation for a new mobile banking platform, bridging communication between business stakeholders and developers.',
-    impact: 'Successfully delivered 50+ user stories and SRS documentation that reduced development rework by 20%.',
-    tools: ['JIRA', 'Confluence', 'Figma', 'User Stories'],
-    image: 'https://img.freepik.com/free-vector/digital-banking-services-concept-illustration_114360-12836.jpg',
-    metrics: [
-      { name: 'Stakeholder Satisfaction', value: 92 },
-      { name: 'On-time Delivery', value: 88 }
-    ]
+    title: 'Attendance Management System',
+    category: 'Operations & Systems',
+    description: 'A robust solution designed to efficiently track learner and "geek" check-ins and check-outs, automating the entire attendance workflow.',
+    impact: 'Eliminated manual errors in time tracking and improved operational management of learner attendance records.',
+    tools: ['Springboot', 'Angular', 'Postgres', 'REST API'],
+    image: 'https://img.freepik.com/free-vector/checking-attendance-concept-illustration_114360-7813.jpg',
+    metrics: []
   },
   {
     id: '3',
-    title: 'Cloud Migration Strategy',
-    category: 'Systems Analysis',
-    description: 'Analysed existing on-premise infrastructure and designed the logical architecture for a transition to AWS microservices.',
-    impact: 'Decreased infrastructure overhead costs by $150k annually through optimized cloud resource planning.',
-    tools: ['AWS', 'Enterprise Architect', 'Lucidchart', 'BPMN'],
-    image: 'https://img.freepik.com/free-vector/cloud-computing-concept-illustration_114360-631.jpg',
-    metrics: [
-      { name: 'Cost Reduction', value: 30 },
-      { name: 'Scalability', value: 100 }
-    ]
+    title: 'Decorexy (AI E-commerce)',
+    category: 'E-commerce & AI',
+    description: 'An E-commerce platform for furniture sales featuring a unique vendor verification system to ensure products meet minimum requirements.',
+    impact: 'Integrated Gemini AI Studio to automate furniture quality checks, ensuring a high-standard marketplace for all users.',
+    tools: ['React', 'Java', 'Springboot', 'AI Studio (Gemini)'],
+    image: 'https://img.freepik.com/free-vector/shopping-app-concept-illustration_114360-1141.jpg',
+    metrics: []
+  },
+  {
+    id: '4',
+    title: 'FRS – Account Balance Manager (FNB)',
+    category: 'Requirements Engineering',
+    description: 'Documented detailed Functional Requirements Specifications (FRS) for FNB’s Account Balance Manager system.',
+    impact: 'Provided a comprehensive technical roadmap that successfully bridged the gap between business stakeholders and developers.',
+    tools: ['Functional Specs', 'Stakeholder Mgmt', 'Banking Systems', 'BPMN'],
+    image: 'https://img.freepik.com/free-vector/business-contract-concept-illustration_114360-4892.jpg',
+    metrics: []
   }
 ];
 
 export const SKILLS: Skill[] = [
   { name: 'UML & BPMN 2.0', level: 95, category: 'Technical' },
+  { name: 'Java & Springboot', level: 88, category: 'Technical' },
   { name: 'SQL & DB Schema Design', level: 90, category: 'Technical' },
-  { name: 'API Documentation (Swagger)', level: 85, category: 'Technical' },
-  { name: 'Req. Elicitation (SRS)', level: 95, category: 'Domain' },
+  { name: 'Req. Elicitation (SRS/FRS)', level: 95, category: 'Domain' },
   { name: 'SDLC (Agile/Scrum)', level: 92, category: 'Domain' },
   { name: 'System Architecture', level: 88, category: 'Domain' },
   { name: 'Stakeholder Mgmt', level: 90, category: 'Soft' },
@@ -66,14 +68,18 @@ export const SKILLS: Skill[] = [
 
 export const EXPERIENCES: Experience[] = [
   {
-    company: 'TechFlow Solutions',
-    role: 'Systems & Business Analyst',
-    period: '2021 - Present',
+    company: 'FNB South Africa',
+    role: 'Junior System Analyst',
+    period: 'June 2023 - Present',
     description: [
-      'Bridge the gap between business needs and technical solutions by translating high-level requirements into detailed system specifications.',
-      'Design comprehensive UML diagrams including sequence, class, and use-case diagrams to guide development teams.',
-      'Lead UAT (User Acceptance Testing) cycles and SIT (System Integration Testing) to ensure software quality.',
-      'Optimized 15+ business processes using BPMN standards, resulting in significant operational efficiency gains.'
+      'Conducted requirement analysis sessions with stakeholders and assisted in preparing documentation for new features.',
+      'Conducted requirements gathering sessions and documented user and software requirements.',
+      'Developed and tested APIs, ensuring integration with core banking services.',
+      'System Analyst Project: Documented a Functional Requirements Specification (FRS) for the Account Balance Manager (ABM) project, aligning business requirements with technical design and providing clear guidelines for developers and QA teams.',
+      'Collaborated with multiple teams to define and improve business processes and enterprise workflows.',
+      'Provided strategic recommendations on system enhancements and product performance improvements.',
+      'Monitored project status reports and contributed to continuous process improvement.',
+      'Key Achievement: Successfully bridged the gap between business stakeholders and developers by preparing a detailed FRS that improved communication and reduced misinterpretation in project delivery.'
     ]
   }
 ];
