@@ -4,7 +4,7 @@ import { PERSONAL_INFO } from '../data';
 
 const Hero: React.FC = () => {
   // EDIT THIS LINE: Replace the URL below with your own image link or a Base64 string
-  const profileImageUrl = "https://media.licdn.com/dms/image/v2/D4D35AQFAVeZdKCZrbg/profile-framedphoto-shrink_400_400/B4DZvpPixIJoAc-/0/1769144724833?e=1771412400&v=beta&t=cycL8MO7RIs1dk9nhg4av-5Z93CS28Dd42dneUQQqCQ"; 
+  const profileImageUrl = "https://media.licdn.com/dms/image/v2/D4D03AQEBvo1HSfnZfg/profile-displayphoto-shrink_400_400/B4DZQ8KBfMGgAg-/0/1736176051596?e=1772668800&v=beta&t=9JIR0ZffXf9HOaq2Yh53gKiaYMO391QowDcQ76jppiI"; 
 
   return (
     <section className="bg-white dark:bg-slate-950 pt-12 pb-20 transition-colors">
